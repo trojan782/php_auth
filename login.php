@@ -27,16 +27,15 @@
   <div class='window'>
     <div class='overlay'></div>
     <div class='content'>
-      <div class='welcome'>Hello There!</div>
-      <div class='subtitle'>We're almost done. Before using our services you need to create an account.</div>
+      <div class='welcome'>Hello Welcome back!</div>
+
       <div class='input-fields'>
-        <input type='text' placeholder='Username' class='input-line full-width'></input>
         <input type='email' placeholder='Email' class='input-line full-width'></input>
         <input type='password' placeholder='Password' class='input-line full-width'></input>
 
       </div>
-      <div class='spacing'>or continue with <span class='highlight'>Facebook</span></div>
-      <div><button class='ghost-round full-width'>Create Account</button></div>
+      <div class='spacing'>or <a href = "signup.php"class='highlight'>sign up</a></div>
+      <div><button class='ghost-round full-width'>Login</button></div>
     </div>
   </div>
 </div>
@@ -44,3 +43,4 @@
 </body>
 
 </html>
+<!-- https://freefrontend.com/css-login-forms/ -->
