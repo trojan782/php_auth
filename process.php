@@ -9,8 +9,8 @@ if (isset($_POST['signup'])) {
             'password2'     =>     $_POST["password2"],
 
         );
-    $fina = json_encode($txt);
-    fwrite($myfile, $fina);
+    $final = json_encode($txt);
+    fwrite($myfile, $final);
     fclose($myfile);
 }
 
