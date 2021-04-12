@@ -212,3 +212,11 @@ button:focus {
     height: 100%;
   }
 }
+h2 {
+    text-align: center;
+}
+.success {
+  border: 2px black;
+  margin: auto;
+  background-image: url('./images/img.png');
+}

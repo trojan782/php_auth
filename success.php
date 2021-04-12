@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h2>You have successfully logged in!</h2>
     <div class="succes">
-        <img src="/images/img.png" alt="">
+
     </div>
 </body>
+
 </html>

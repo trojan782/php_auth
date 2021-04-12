@@ -22,24 +22,24 @@
                 </label>
             </form>
         </div> -->
-        <div class='bold-line'></div>
-<div class='container'>
-  <div class='window'>
-    <div class='overlay'></div>
-    <div class='content'>
-      <div class='welcome'>Hello Welcome back!</div>
-
-      <div class='input-fields'>
-        <input type='email' placeholder='Email' class='input-line full-width'></input>
-        <input type='password' placeholder='Password' class='input-line full-width'></input>
-
-      </div>
-      <div class='spacing'>or <a href = "signup.php"class='highlight'>sign up</a></div>
-      <div><button class='ghost-round full-width'>Login</button></div>
-    </div>
-  </div>
-</div>
-    </div>
+            <div class='bold-line'></div>
+            <div class='container'>
+                <div class='window'>
+                    <div class='overlay'></div>
+                    <div class='content'>
+                        <div class='welcome'>Hello Welcome back!</div>
+                        <form action="" method="post">
+                            <div class='input-fields'>
+                                <input type='email' name = "email" placeholder='Email' class='input-line full-width'></input>
+                                <input type='password' name = "password" placeholder='Password' class='input-line full-width'></input>
+                            </div>
+                            <div class='spacing'>or <a href="signup.php" class='highlight'>sign up</a></div>
+                            <div><button class='ghost-round full-width' name="login">Login</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>

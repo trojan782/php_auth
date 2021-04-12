@@ -1,3 +1,4 @@
+<?php require_once 'process.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,14 +30,16 @@
                     <div class='content'>
                         <div class='welcome'>Hello There!</div>
                         <div class='subtitle'>Create an account with us!</div>
-                        <form action="" method="post">
+                        <form action=" " method="post">
                             <div class='input-fields'>
-                                <input type='text' placeholder='Username' class='input-line full-width'></input>
-                                <input type='email' placeholder='Email' class='input-line full-width'></input>
-                                <input type='password' placeholder='Password' class='input-line full-width'></input>
+                                <input type='text' placeholder='name' name = "name" class='input-line full-width'></input>
+                                <input type='email' placeholder='Email' name = "email" class='input-line full-width'></input>
+                                <input type='password' placeholder='Password' name = "password1" class='input-line full-width'></input>
+                                <input type='password' placeholder='Confirm Password' name = "password2" class='input-line full-width'></input>
+
                             </div>
                             <div class='spacing'>Already a member?<a href="login.php" class='highlight'>Login</a></div>
-                            <div><button class='ghost-round full-width'>Create Account</button></div>
+                            <div><button class='ghost-round full-width' name="signup">Create Account</button></div>
                         </form>
                     </div>
                 </div>
