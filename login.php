@@ -1,4 +1,13 @@
-<?php require_once 'log.php'; ?>
+<?php
+include 'db.json';
+session_start();
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    extract($_POST);
+    $username = $_POST['name'];
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +39,7 @@
                         <div class='welcome'>Hello Welcome back!</div>
                         <form action="" method="post">
                             <div class='input-fields'>
-                                <input type='email' name = "email" placeholder='Email' class='input-line full-width'></input>
+                                <input type='text' name = "name" placeholder='Email' class='input-line full-width'></input>
                                 <input type='password' name = "password" placeholder='Password' class='input-line full-width'></input>
                             </div>
                             <div class='spacing'>or <a href="signup.php" class='highlight'>sign up</a></div>
