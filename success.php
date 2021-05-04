@@ -20,7 +20,8 @@ echo "Hello world";
     <h2>You have successfully logged in!</h2>
     <div class="success">
         <h4>What Do you want to do next??</h4>
-        <button>Reset Password</button>
+        <!-- <button href="reset.php">Reset Password</button> -->
+        <a class="nav-link active" aria-current="page" href="./reset.php">Reset Password</a>
         <a class="nav-link active" aria-current="page" href="./logout.php">Logout</a>
     </div>
 </body>
