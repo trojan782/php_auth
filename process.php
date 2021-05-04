@@ -1,36 +1,48 @@
 <?php
 session_start();
-if (isset($_POST['signup'])) {
-    $myfile = fopen("db.json", "a") or die("Unable to open file!");
-    if (file_get_contents("db.json")) {
-    }
-    $txt = [
-        'name'           =>     $_POST['name'],
-        'email'          =>     $_POST["email"],
-        'password1'     =>     $_POST["password1"],
-            'password2'     =>     $_POST["password2"],
-    ];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $json = file_get_contents('db.json');
-    // $data = json_decode($json);
-    // $data[] = $_POST['data'];
-    file_put_contents('db.json', json_encode($txt));
+	function get_data()
+	{
+		// $name = $_POST['name'];
+		$file_name = 'db' . '.json';
+		//to check if the file exists
+		if (file_exists("$file_name")) {
+			$current_data = file_get_contents("$file_name");
+			$array_data = json_decode($current_data, true);
 
-    // $final = json_encode($txt, JSON_PRETTY_PRINT);
-    // file_put_contents('db.json', $final);
-    // fwrite($myfile, $final . ",");
-    // fclose($myfile);
-    // header("location:login.php");
+			$extra = array(
+				'id' => rand(1, 1000),
+				'name' => $_POST['name'],
+				'email' => $_POST['email'],
+				// 'password1' => password_hash($_POST['password1'], PASSWORD_DEFAULT),
+				'password1' => $_POST['password1']
 
+				// 'password2' => password_hash($_POST['password2'], PASSWORD_DEFAULT)
+			);
+			$array_data[] = $extra;
+			return json_encode($array_data);
+		} else {
+			$datae = array();
+			$datae[] = array(
+				'name' => $_POST['name'],
+				'email' => $_POST['email'],
+				'password1' => $_POST['password1'],
+				// 'password2' => $_POST['password2']
+
+			);
+			return json_encode($datae);
+		}
+	}
+
+	$file_name = 'db' . '.json';
+
+	if (file_put_contents("$file_name", get_data())) {
+		echo '<script>alert("signup successfull")</script>';
+		header("location: login.php");
+	} else {
+		header("location: signup.php");
+	}
 }
-// $data = file_get_contents("db.json");
-// $json = json_decode($data, true);
-// foreach ($json as $key => $value) {
-//     if (!is_array($value)) {
-//         echo $key . '=>' . $value . '<br/>';
-//     } else {
-//         foreach ($value as $key => $val) {
-//             echo $key . '=>' . $val . '<br/>';
-//         }
-//     }
-// }
+
+

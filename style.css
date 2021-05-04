@@ -219,4 +219,9 @@ h2 {
   border: 2px black;
   margin: auto;
   background-image: url('./images/img.png');
+  width: 800px;
+  height: 800px;
+}
+.success1 {
+  color: aquamarine;
 }

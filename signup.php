@@ -13,16 +13,6 @@
 <body>
     <div class="container">
         <div class="login">
-            <!-- <form action="post">
-                <label for="emali">
-                    <input type="email" name="email" placeholder="Email" required>
-                </label>
-
-                <label for="password">
-                    <input type="password" name="password" placeholder="Password" required>
-                </label>
-            </form>
-        </div> -->
             <div class='bold-line'></div>
             <div class='container'>
                 <div class='window'>
@@ -32,11 +22,10 @@
                         <div class='subtitle'>Create an account with us!</div>
                         <form action=" " method="post">
                             <div class='input-fields'>
-                                <input type='text' placeholder='name' name = "name" class='input-line full-width'></input>
-                                <input type='email' placeholder='Email' name = "email" class='input-line full-width'></input>
-                                <input type='password' placeholder='Password' name = "password1" class='input-line full-width'></input>
-                                <input type='password' placeholder='Confirm Password' name = "password2" class='input-line full-width'></input>
-
+                                <input type='text' placeholder='name' name = "name" class='input-line full-width' required></input>
+                                <input type='email' placeholder='Email' name = "email" class='input-line full-width' required></input>
+                                <input type='password' placeholder='Password' name = "password1" class='input-line full-width' required></input>
+                                <!-- <input type='password' placeholder='Confirm Password' name = "password2" class='input-line full-width' required></input> -->
                             </div>
                             <div class='spacing'>Already a member?<a href="login.php" class='highlight'>Login</a></div>
                             <div><button class='ghost-round full-width' name="signup">Create Account</button></div>
@@ -46,5 +35,4 @@
             </div>
         </div>
 </body>
-
 </html>

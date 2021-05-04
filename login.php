@@ -1,11 +1,24 @@
 <?php
-include 'db.json';
-session_start();
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    extract($_POST);
-    $username = $_POST['name'];
-}
+// require_once 'db.json';
 
+session_start();
+if(isset($_POST['login'])) {
+    $id = $_POST['name'];
+    $password = $_POST['password'];
+    $files = file_get_contents('db.json');
+    $file = json_decode($files);
+
+    foreach ($file as $detail) {
+       $name = $detail->name;
+    //    $verifiedPass = password_verify($password, $detail->password1);
+    $pass = $detail->password1;
+    }
+    if ($id == $name && $password == $pass) {
+        header("location: success.php");
+    } else {
+        echo "There was a problem logging you in";
+    }
+}
 
 ?>
 <!DOCTYPE html>
@@ -21,16 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="container">
         <div class="login">
-            <!-- <form action="post">
-                <label for="emali">
-                    <input type="email" name="email" placeholder="Email" required>
-                </label>
-
-                <label for="password">
-                    <input type="password" name="password" placeholder="Password" required>
-                </label>
-            </form>
-        </div> -->
+  
             <div class='bold-line'></div>
             <div class='container'>
                 <div class='window'>
@@ -39,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class='welcome'>Hello Welcome back!</div>
                         <form action="" method="post">
                             <div class='input-fields'>
-                                <input type='text' name = "name" placeholder='Email' class='input-line full-width'></input>
+                                <input type='text' name = "name" placeholder='username' class='input-line full-width'></input>
                                 <input type='password' name = "password" placeholder='Password' class='input-line full-width'></input>
                             </div>
                             <div class='spacing'>or <a href="signup.php" class='highlight'>sign up</a></div>
