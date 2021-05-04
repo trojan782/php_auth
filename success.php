@@ -1,3 +1,10 @@
+<?php
+// session_start();
+// if(isset(['logout'])) {
+//     header("location: login.php");
+// }
+echo "Hello world";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +18,10 @@
 
 <body>
     <h2>You have successfully logged in!</h2>
-    <div class="succes">
-
+    <div class="success">
+        <h4>What Do you want to do next??</h4>
+        <button>Reset Password</button>
+        <a class="nav-link active" aria-current="page" href="./logout.php">Logout</a>
     </div>
 </body>
 
